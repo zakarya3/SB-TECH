@@ -139,6 +139,17 @@ $resultsP=$queryP->fetchAll();
                     <!-- End Submenu -->
                 </li>
                 <!-- End Blog -->
+                <!-- Blog -->
+                <li class="hs-has-sub-menu navbar-nav-item">
+                  <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link " href="#meteo" aria-haspopup="true"
+                    aria-expanded="false" aria-labelledby="blogSubMenu">Météo</a>
+
+                  <!-- Blog - Submenu -->
+                  <div id="blogSubMenu" class="hs-sub-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
+
+                    <!-- End Submenu -->
+                </li>
+                <!-- End Blog -->
 
 
                 <!-- Demos -->
@@ -345,7 +356,7 @@ $resultsP=$queryP->fetchAll();
         </div>
       </div>
     </div>
-    <div class="bg-light">
+    <div class="bg-light" id="meteo">
       <div class="container space-2">
         <div class="row justify-content-center">
           <div class="col-md-9 col-lg-6">
