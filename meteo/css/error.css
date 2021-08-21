@@ -1,0 +1,74 @@
+@font-face {
+    src: url(../font/ReemKufi-Regular.ttf);
+    font-family: reem;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: reem;
+}
+main{
+    background:url(../images/undraw_page_not_found_su7k.png);
+    background-position:center;
+    background-size:cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main:before{
+    content:'';
+    position:absolute;top:0;
+    width:100vw;
+    height:100vh;
+    background:rgba(0, 0, 0, 0.211);
+    z-index:0;
+}
+.msg{
+    width: 60%;
+    position: absolute;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.789);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    top: 50%;
+    padding: 2em;
+    font-size: .9em;
+}
+.msg .icon{
+    width: 100%;
+    text-align: center;
+}
+.msg .icon i{
+    font-size: 4em;
+    color: rgb(86, 45, 174);
+    padding: 10px;
+}
+.msg .title{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+}
+.msg .message{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4em;
+    margin-top: 10px;
+}
+.msg .link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.msg .link a{
+    text-decoration: none;
+    color: blueviolet;
+    font-size: 1.2em; 
+}

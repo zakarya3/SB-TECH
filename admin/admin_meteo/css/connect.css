@@ -1,0 +1,86 @@
+@font-face {
+    src: url(../font/ReemKufi-Regular.ttf);
+    font-family: reem;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: reem;
+    background: url(../images/bg.png);
+}
+.container{
+    width: 80%;
+    margin: 50px auto;
+    height: 600px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.782);
+    border-radius: 10px;
+}
+.container .left{
+    float: left;
+    width: 40%;
+}
+.container .left .head {
+    width: 100%;
+}
+.container .left .head a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container .left .head img{
+    width: 40%;
+    margin-top: 20px;
+}
+.container .left .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.container .left .title h1{
+    font-size: x-large;
+    color: #D79845;
+}
+.container .left .form{
+    width: 80%;
+    margin: 20px auto;
+}
+input[type=email],[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: small;
+}
+input[type=submit] {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px 45px;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    display: block;
+    font-size: 1em;
+    background: #f7a11f;
+    color: white;
+    font-weight: 550;
+}
+.container .right{
+    float: right;
+    width: 60%;
+}
+.container .right .image{
+    width: 100%;
+}
+.container .right .image img{
+    width: 100%;
+    height: 600px;
+}
+
+  

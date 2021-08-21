@@ -1,0 +1,340 @@
+@font-face {
+  src: url(../fonts/Falling.otf);
+  font-family: Falling;
+}
+.inbox-sec {
+    width: 95%;
+    height: 88%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 3px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    bottom: 0;
+    margin-top: 1em;
+  }
+  
+  .inbox-sec .messages {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  
+  .inbox-sec .messages .message {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.08);
+    padding: 0.5em 0;
+    margin-bottom: 1em;
+    -webkit-transition: 0.2s -webkit-transform;
+    transition: 0.2s -webkit-transform;
+    transition: 0.2s transform;
+    transition: 0.2s transform, 0.2s -webkit-transform;
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-backface-visibility: hidden !important;
+            backface-visibility: hidden !important;
+    border-radius: 3px;
+  }
+  
+  .inbox-sec .messages .message:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .inbox-sec .messages .message a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .inbox-sec .messages .message .top-sec {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0.9em;
+  }
+  
+  .inbox-sec .messages .message .top-sec .icon {
+    width: 1.3em;
+    height: 1.3em;
+    margin: 0 0.5em;
+  }
+  
+  .inbox-sec .messages .message .top-sec .icon img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .inbox-sec .messages .message .top-sec .name {
+    font-size: 0.55em;
+    color: #727375;
+    font-family: Falling;
+  }
+  
+  .inbox-sec .messages .message .min-msg {
+    font-size: 0.6em;
+    padding: 0 0.5em 0 1em;
+    margin-top: 1em;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+  
+  .inbox-sec .messages .message .bt-sc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100% - 1em);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-top: 1em;
+  }
+  
+  .inbox-sec .messages .message .bt-sc .c-bt {
+    width: 50%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  
+  .inbox-sec .messages .message .bt-sc .c-bt input {
+    display: none;
+  }
+  
+  .inbox-sec .messages .message .bt-sc .c-bt label {
+    width: 0.6em;
+    height: 0.6em;
+    background-color: #f4f5f9;
+    border: 1px solid #eaebef;
+    border-radius: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0.5em;
+  }
+  
+  .inbox-sec .messages .message .bt-sc .c-bt label i {
+    font-size: 0.35em;
+    color: gray;
+    -webkit-transition: 0.3s -webkit-transform;
+    transition: 0.3s -webkit-transform;
+    transition: 0.3s transform;
+    transition: 0.3s transform, 0.3s -webkit-transform;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  
+  .inbox-sec .messages .message .bt-sc .c-bt button {
+    background-color: transparent;
+    border: none;
+    font-size: 0.5em;
+    padding: 0 !important;
+    margin-bottom: 0.1em;
+    cursor: pointer;
+    outline: none !important;
+  }
+  
+  .inbox-sec .messages .message .bt-sc .c-bt button.fav i {
+    color: #f5a91e;
+  }
+  
+  .inbox-sec .messages .message .bt-sc .c-bt button i {
+    font-size: 1.2em;
+    color: #dddedf;
+  }
+  
+  .inbox-sec .messages .message .bt-sc .c-bt input[type="checkbox"]:checked + label i {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  
+  .inbox-sec .messages .message .bt-sc .dateTime {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 0.5em;
+    color: #bcbdbe;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  
+  .inbox-sec .display-message {
+    position: relative;
+    width: 69%;
+    height: calc(100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #fff;
+    overflow-y: auto !important;
+  }
+  
+  .inbox-sec .display-message svg {
+    width: 5em;
+    height: 5em;
+    -webkit-transform: translateX(1.3em);
+            transform: translateX(1.3em);
+  }
+  
+  .inbox-sec .display-message.dis {
+    position: relative;
+    display: block;
+    width: calc(100% - 2em) !important;
+    padding: 0 1em;
+    height: auto;
+    min-height: 100%;
+  }
+  
+  .inbox-sec .display-message.dis .t_sec {
+    margin-top: 1em;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  
+  .inbox-sec .display-message.dis .t_sec .conl {
+    font-size: 0.6em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  
+  .inbox-sec .display-message.dis .t_sec .conl .date {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #c3c4c5;
+    margin-bottom: 0.5em;
+  }
+  
+  .inbox-sec .display-message.dis .t_sec .conl .object {
+    font-size: 1.6em;
+    font-family: Falling;
+    margin: 0.3em 0;
+  }
+  
+  .inbox-sec .display-message.dis .t_sec .conl .from,
+  .inbox-sec .display-message.dis .t_sec .conl .companyName,
+  .inbox-sec .display-message.dis .t_sec .conl .fullname {
+    margin-top: 1em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 0.9em;
+  }
+  
+  .inbox-sec .display-message.dis .t_sec .conl .from strong,
+  .inbox-sec .display-message.dis .t_sec .conl .companyName strong,
+  .inbox-sec .display-message.dis .t_sec .conl .fullname strong {
+    margin-right: 0.3em;
+  }
+  
+  .inbox-sec .display-message.dis .t_sec .conr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 50%;
+  }
+  
+  .inbox-sec .display-message.dis .t_sec .conr button {
+    background-color: transparent;
+    border: none;
+    width: 2.3em;
+    height: 2.3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0.5em;
+    cursor: pointer;
+  }
+  
+  .inbox-sec .display-message.dis .t_sec .conr button svg {
+    width: 90%;
+    height: 90%;
+  }
+  
+  .inbox-sec .display-message.dis .message {
+    font-size: 0.6em !important;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 1em 0;
+    outline: none !important;
+  }
+  
+  .inbox-sec .display-message.dis .message div {
+    outline: none !important;
+  }
+  /*# sourceMappingURL=inbox.css.map */

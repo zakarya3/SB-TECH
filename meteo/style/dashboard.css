@@ -1,0 +1,754 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Almarai&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: calc(1em + 0.75vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .left-side {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: calc(5em);
+  background-color: #fff;
+  overflow: hidden auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .left-side .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0.8em;
+  width: 100%;
+}
+
+body .left-side .logo img {
+  width: 80%;
+}
+
+body .left-side .navs {
+  position: relative;
+  margin-top: 3em;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .left-side .navs .nav-link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  width: 40%;
+  -webkit-transition: 0.4s background-color, 0.4s -webkit-box-shadow;
+  transition: 0.4s background-color, 0.4s -webkit-box-shadow;
+  transition: 0.4s background-color, 0.4s box-shadow;
+  transition: 0.4s background-color, 0.4s box-shadow, 0.4s -webkit-box-shadow;
+  font-size: 0.9em;
+}
+
+body .left-side .navs .nav-link:hover {
+  -webkit-box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+body .left-side .navs .nav-link.active {
+  -webkit-box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+body .left-side .navs .nav-link a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  font-size: 0.6em;
+  color: inherit;
+}
+
+body .left-side .navs .nav-link a svg {
+  position: relative;
+  width: 1.4em;
+  fill: #ff9a00;
+  -webkit-transition: 0.4s fill;
+  transition: 0.4s fill;
+}
+
+body .left-side .navs .nav-link a svg.search {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+body .left-side .navs .nav-link a svg.analytics, body .left-side .navs .nav-link a svg.location {
+  width: 1.6em;
+}
+
+body .left-side .navs .nav-link a span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-top: 0.4em;
+  font-size: 0.9em;
+  color: #c0ac94;
+  -webkit-transition: 0.4s color;
+  transition: 0.4s color;
+}
+
+body .right-side {
+  position: absolute;
+  left: 5em;
+  background-color: #f5f5f5;
+  height: 100%;
+  width: calc(100% - 5em);
+  overflow: hidden auto;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right-side nav {
+  width: 95%;
+  background-color: #fff;
+  margin-top: 0.7em;
+  border-radius: 5px;
+  height: 2em;
+  padding: 0.2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0.9em;
+}
+
+body .right-side nav .iconMain {
+  position: relative;
+  margin: 0 1em;
+}
+
+body .right-side nav .iconMain svg {
+  width: 0.8em;
+}
+
+body .right-side nav .navs-ng {
+  margin: 0.7em;
+}
+
+body .right-side nav .navs-ng ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right-side nav .navs-ng ul li {
+  font-size: 0.6em;
+  margin: 0 0 0 1.5em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Almarai", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right-side nav .navs-ng ul li#fullScreen {
+  cursor: pointer;
+}
+
+body .right-side nav .navs-ng ul li.backend a {
+  color: #2db7f5;
+}
+
+body .right-side nav .navs-ng ul li .icon {
+  position: relative;
+  margin: 0 0.5em;
+}
+
+body .right-side nav .navs-ng ul li .icon svg {
+  width: 0.9em;
+  -webkit-transform: translateY(0.1em);
+          transform: translateY(0.1em);
+}
+
+body .right-side nav .navs-ng ul li a {
+  text-decoration: none;
+}
+
+body .right-side .sen-info {
+  position: relative;
+  width: 95%;
+  font-size: 0.7em;
+  margin-top: 1em;
+}
+
+body .right-side .sen-info .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right-side .sen-info .container div {
+  margin-right: 1em;
+  font-size: 0.7em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Almarai", sans-serif;
+  background-color: #ecf5fe;
+  border: 1px solid #e1e9f4;
+  color: #8bb8ef;
+  padding: 0.6em 0.5em;
+  border-radius: 0.3em;
+}
+
+body .right-side .overview {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Almarai", sans-serif;
+  font-size: 0.7em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  left: -45.5%;
+  -webkit-transform: translateX(45%);
+          transform: translateX(45%);
+  margin-top: 1.5em;
+}
+
+body .right-side .overview span {
+  background-color: #f5f5f5;
+  z-index: 2;
+  padding: 0 0.5em;
+  font-size: 0.8em;
+}
+
+body .right-side .overview .line {
+  position: absolute;
+  height: 0.1em;
+  background-color: #dedfe3;
+  width: 50em;
+  top: 50%;
+  z-index: -1;
+  left: -30%;
+}
+
+body .right-side .tabpanel {
+  position: relative;
+  width: 95%;
+  height: auto;
+  background-color: #fff;
+  margin-top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.5em 0;
+}
+
+body .right-side .tabpanel .tab-pn {
+  position: relative;
+  width: 10em;
+  height: 5em;
+  margin: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #c61444;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px;
+  font-size: 0.7em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Almarai", sans-serif;
+}
+
+body .right-side .tabpanel .tab-pn div {
+  height: 100%;
+}
+
+body .right-side .tabpanel .tab-pn div.icon {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .right-side .tabpanel .tab-pn div.data {
+  width: 70%;
+  color: #fff;
+  position: relative;
+}
+
+body .right-side .tabpanel .tab-pn div.data .data-label {
+  height: 100%;
+  font-size: 0.75em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-0.3em);
+          transform: translateY(-0.3em);
+}
+
+body .right-side .tabpanel .tab-pn div.data .data-content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.7em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0.5em;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right-side .tabpanel .tab-pn div.data .data-content .st {
+  margin-right: 0.3em;
+  font-size: 1.1em;
+}
+
+body .right-side .tabpanel .tab-pn div svg {
+  width: 2.2em;
+  -webkit-transform: translate(0.2em, 0.5em);
+          transform: translate(0.2em, 0.5em);
+  fill: #fff;
+}
+
+body .right-side .todayState {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Almarai", sans-serif;
+  font-size: 0.7em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  left: -44.5%;
+  -webkit-transform: translateX(45%);
+          transform: translateX(45%);
+  margin-top: 1.5em;
+}
+
+body .right-side .todayState span {
+  background-color: #f5f5f5;
+  z-index: 2;
+  padding: 0 0.5em;
+  font-size: 0.8em;
+}
+
+body .right-side .todayState .line {
+  position: absolute;
+  height: 0.1em;
+  background-color: #dedfe3;
+  width: 50em;
+  top: 50%;
+  z-index: -1;
+  left: -30%;
+}
+
+body .right-side .statictics {
+  position: relative;
+  background-color: #fff;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em;
+  padding: 1em 0;
+  border-radius: 8px;
+}
+
+body .right-side .statictics table {
+  position: relative;
+  width: 95%;
+  text-align: center;
+  font-size: 0.5em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Almarai", sans-serif;
+}
+
+body .right-side .statictics table tr:first-of-type {
+  height: 4em;
+  z-index: 1;
+}
+
+body .right-side .statictics table tr:hover td {
+  background-color: #f0f2fb;
+}
+
+body .right-side .statictics table tr:nth-child(odd) {
+  background-color: #f8f7f7;
+}
+
+body .right-side .statictics table td {
+  padding: 1em;
+  font-size: 0.9em;
+  -webkit-transition: 0.4s background-color;
+  transition: 0.4s background-color;
+  height: 2.5em;
+}
+
+body .right-side .statictics table th {
+  background-color: #2db7f5;
+  color: #fff;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.1em;
+}
+
+body .right-side .statictics table th:first-of-type {
+  border-top-left-radius: 10px;
+}
+
+body .right-side .statictics table th:last-of-type {
+  border-top-right-radius: 10px;
+}
+
+body .right-side .search-area {
+  position: relative;
+  width: 95%;
+}
+
+body .right-side .search-area .search-area-container {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 100%;
+  -webkit-box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  margin: 0.5em 0;
+  height: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+body .right-side .search-area .search-area-container input {
+  position: relative;
+  border: none;
+  outline: none;
+  border: 0.1em solid #dedfe3;
+  height: 100%;
+  border-radius: 5px;
+  margin: 0 1em;
+  padding: 0.2em 2em;
+  font-size: 0.5em;
+}
+
+body .right-side .search-area .search-area-container button {
+  height: 100%;
+  padding: 1em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2db7f5;
+  color: #fff;
+  border: none;
+  margin: 0 0.7em;
+  font-size: 0.5em;
+  border-radius: 5px;
+}
+
+body .right-side .data-area {
+  position: relative;
+  width: 98%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em 0 0.5em 0;
+  margin: 0em 0 1em 0;
+}
+
+body .right-side .data-area table {
+  position: relative;
+  width: 97%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.4em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Almarai", sans-serif;
+}
+
+body .right-side .data-area table thead tr:first-of-type {
+  height: 6em;
+  z-index: 1;
+  background-color: #f5f5f5;
+}
+
+body .right-side .data-area table thead tr:first-of-type th {
+  border: 1px solid #dedfe3;
+  width: 10%;
+}
+
+body .right-side .data-area table td {
+  height: 3em;
+  border: 1px solid #dedfe3;
+}
+
+body .right-side .pagination {
+  font-size: 0.7em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  left: 97%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+body .right-side .pagination #container-pagination .paginationjs {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+
+body .right-side .pagination #container-pagination .paginationjs input {
+  width: 4em;
+  border: 1px solid #dedfe3;
+  text-align: center;
+  outline: none;
+  padding: 0.25em 0;
+  margin-left: 2em;
+}
+
+body .right-side .pagination #container-pagination .paginationjs input[type="button"] {
+  width: 2.5em;
+  margin: 0 0.5em;
+}
+
+body .right-side .pagination #container-pagination .paginationjs .paginationjs-pages ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-transform: translateY(-0.05em);
+          transform: translateY(-0.05em);
+}
+
+body .right-side .pagination #container-pagination .paginationjs .paginationjs-pages ul li {
+  margin: 0 0.2em;
+}
+
+body .right-side .pagination #container-pagination .paginationjs .paginationjs-pages ul li.active a {
+  background-color: #2db7f5;
+  color: #fff;
+}
+
+body .right-side .pagination #container-pagination .paginationjs .paginationjs-pages ul li a {
+  text-decoration: none;
+  border: 1px solid #dedfe3;
+  padding: 0.3em 0.7em;
+  background-color: #f5f5f5;
+  font-size: 0.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Almarai", sans-serif;
+  -webkit-transition: 0.2s background-color;
+  transition: 0.2s background-color;
+}
+
+body .right-side .curve-data {
+  position: relative;
+  width: 95%;
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right-side .curve-data .container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right-side .curve-data .container #curve_chart {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+body .daterangepicker .drp-buttons .btn {
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border: none;
+  background-color: #2db7f5;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Almarai", sans-serif !important;
+}
+
+body .daterangepicker td.active,
+body .daterangepicker td.active:hover {
+  background-color: #2db7f5 !important;
+  border-color: transparent;
+  color: #fff;
+}
+/*# sourceMappingURL=dashboard.css.map */

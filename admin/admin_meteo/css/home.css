@@ -1,0 +1,67 @@
+@font-face {
+    src: url(../font/ReemKufi-Regular.ttf);
+    font-family: reem;
+}
+body{
+    font-family: reem;
+    font-size: 1.8em;
+}
+.row.content {height: 550px}
+    
+.sidenav {
+  background-color: #f1f1f1;
+  height: 100%;
+}
+.row td img{
+    width: 20%;
+}
+.hidden-xs img{
+width:50%;
+}
+
+
+.hidden-xs{
+    overflow: hidden;
+    position: fixed;
+}
+.hidden-xs ul .prdx-show.show{
+    display: block;
+}
+.hidden-xs ul li{
+    line-height: 75px;
+    cursor: pointer;
+}
+.table{
+    position: absolute;;
+    left: 25%;
+    width: 75%;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {background-color:#f5f5f5;}
+
+.icons{
+    width: 100%;
+}
+.icons ul{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons ul li{
+    padding: 40px;
+    list-style: none;
+}
+.icons ul li a{
+    font-size: 1.6em;
+}

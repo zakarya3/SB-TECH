@@ -1,0 +1,155 @@
+@font-face {
+    src: url(../font/ReemKufi-Regular.ttf);
+    font-family: reem;
+}
+body{
+    font-family: reem;
+    font-size: 1.8em;
+}
+.row.content {height: 550px}
+    
+.sidenav {
+  background-color: #f1f1f1;
+  height: 100%;
+}
+.row td img{
+    width: 20%;
+}
+.hidden-xs img{
+width:50%;
+}
+
+
+.hidden-xs{
+    overflow: hidden;
+    position: fixed;
+}
+.hidden-xs ul .prdx-show.show{
+    display: block;
+}
+.hidden-xs ul li{
+    line-height: 75px;
+    cursor: pointer;
+}
+.table{
+    position: absolute;;
+    left: 25%;
+    width: 75%;
+}
+.icons{
+    width: 100%;
+}
+.icons ul{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons ul li{
+    padding: 40px;
+    list-style: none;
+}
+.icons ul li a{
+    font-size: 1.6em;
+}
+.form{
+    width: 80%;
+    position: relative;
+    height: auto;
+    background-color: #fff;
+    left: 45%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin: 0;
+    padding: 2em 10em;
+    font-size: 1.2em;
+}
+.form .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: x-large;
+    color: #D79845;
+}
+.form .info1{
+    width: 100%;
+    position: relative;
+    height: auto;
+    display: flex;
+}
+.form .info1 div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form .info1,.info2 div label{
+    color: #242470;
+    width: fit-content;
+    margin: 0.5em 1em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.form .info1 div input{
+    position: relative;
+    box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.7);
+    padding: 10px 5px;
+    border: none;
+    width: 90%;
+    border: 1px solid #6262623a;
+    margin: 0 1em;
+    font-size: 1em;
+    outline-color: #242470;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+.form .info2{
+    width: 100%;
+    margin: 4em 0 1em 0;
+}
+.form .info2 div input,textarea{
+    position: relative;
+    box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.7);
+    padding: 10px 5px;
+    border: none;
+    width: 80%;
+    border: 1px solid #6262623a;
+    margin: 0 1em;
+    font-size: 1em;
+    outline-color: #242470;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+.form .info2 div textarea{
+    position: relative;
+    box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.7);
+    padding: 10px 5px;
+    border: none;
+    width: 80%;
+    border: 1px solid #6262623a;
+    margin: 0 1em;
+    font-size: 1em;
+    outline-color: #242470;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.form .btn input{
+    background-color: #242470;
+    width: fit-content;
+    border: none;
+    color: #fff;
+    padding: 1em 2.5em;
+    font-size: 1em;
+    position: relative;
+    margin: 2em 0 0 0;
+    left: 90%;
+    transform: translateX(-100%);
+    border-radius: 5px;
+    cursor: pointer;
+}
