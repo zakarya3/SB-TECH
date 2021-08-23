@@ -426,101 +426,30 @@ $resultsP=$queryP->fetchAll();
 
 
     <!-- ========== FOOTER ========== -->
-    <footer class="bg-dark">
       <div class="container">
-        <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
-          <div class="row justify-content-lg-between">
-            <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0">
-              <!-- Logo -->
-              <div class="mb-4">
-                <a href="index.php" aria-label="Front">
-                  <img class="brand" src="assets/svg/logo2.png" alt="Logo">
-                </a>
-              </div>
-              <!-- End Logo -->
-
-              <!-- Nav Link -->
-              <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-                <li class="nav-item">
-                  <a class="nav-link media" href="#">
-                    <span class="media">
-                      <span class="fas fa-location-arrow mt-1 mr-2"></span>
-                      <span class="media-body">
-                        Bureau N 1 .Av Prince Abdelkader N 78 Cite Almassira Agadir
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link media" href="tel:+212 528 217 355">
-                    <span class="media">
-                      <span class="fas fa-phone-alt mt-1 mr-2"></span>
-                      <span class="media-body">
-                        +212 528 217 355
-                      </span>
-                    </span>
-                  </a>
-                </li>
-              </ul>
-              <!-- End Nav Link -->
-            </div>
-
-            <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
-              <h5 class="text-white">Accueil</h5>
-
-              <!-- Nav Link -->
-        
-              <!-- End Nav Link -->
-            </div>
-
-            <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
-              <h5 class="text-white">Produits</h5>
-
-              <!-- Nav Link -->
-              <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-                <li class="nav-item"><a class="nav-link" href="#">Robotique</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Automatisme</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Instrumentation & Régulation</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Matériel Electrique Modulaire</a></li>
-              </ul>
-              <!-- End Nav Link -->
-            </div>
-
-            <div class="col-6 col-md-3 col-lg">
-              <h5 class="text-white">Autres Produits</h5>
-
-              <!-- Nav Link -->
-              <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-                <li class="nav-item"><a class="nav-link" href="#">Telecomunication</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Electronique</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Hydraulique</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Pneumatique</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Groupe Machine</a></li>
-              </ul>
-              <!-- End Nav Link -->
-            </div>
-
-            <div class="col-6 col-md-3 col-lg">
-              <h5 class="text-white">   <a class=""
-                    href="page-login.php"
-                    target="_blank"
-                    style="color:white;">Connexion</a></h5>
-            </div>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="index.php" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <img class="pic" src="assets/svg/logo2.png" alt="">
+            </a>
+            <span class="text-muted">&copy; SB-TECH 2021-2022.</span>
           </div>
-        </div>
-
-        <hr class="opacity-xs my-0">
-
-        <div class="space-1">
-          <!-- Copyright -->
-          <div class="w-md-75 text-lg-center mx-lg-auto">
-            <p class="text-white opacity-sm small">&copy; SB-TECH 2021-2022.</p>
-            <p class="text-white opacity-sm small">SB-TECH , la spécialiste dans l'importation et la forniture de tous matériels industriels conformément aux normes, propose une large gamme de choix de fornitures industrielles. </p>
-          </div>
-          <!-- End Copyright -->
-        </div>
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3">
+              <a href="" class="text-muted"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="ms-3">
+              <a href="" class="text-muted"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="ms-3">
+              <a href="" class="text-muted"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="ms-3">
+              <a href="page-login.php" class="text-muted">connexion</i></a>
+            </li>
+          </ul>
+        </footer>
       </div>
-    </footer>
     <!-- ========== END FOOTER ========== -->
 
    

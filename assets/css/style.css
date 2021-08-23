@@ -69,3 +69,12 @@
     background-color: #ff9a00 !important;
 }
 
+.ms-3 {
+    margin-left: 1rem!important;
+}
+.mb-3{
+    width: 50%;
+}
+.pic{
+    width: 80%;
+}
