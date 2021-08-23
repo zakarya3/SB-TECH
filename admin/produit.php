@@ -22,10 +22,18 @@ $res=$query1->fetchAll();
 if (isset($_POST['ajouter'])) {
     $nom=$_POST['proName'];
     $cat=$_POST['proCat'];
-    $desc=$_POST['proDesc'];
+    $desc=$_POST['message'];
+    $brand=$_FILES['brand']['name'];
     $file1=$_FILES['proPic1']['name'];
     $file2=$_FILES['proPic2']['name'];
-    if(isset($_FILES['proPic1']) && isset($_FILES['proPic2'])){
+    $file3=$_FILES['proPic3']['name'];
+    $file4=$_FILES['proPic4']['name'];
+    if(isset($_FILES['brand']) && isset($_FILES['proPic1']) && isset($_FILES['proPic2']) && isset($_FILES['proPic3']) && isset($_FILES['proPic4'])){
+        $buffer_brand = basename($_FILES["brand"]["name"]);
+            $tr_brand = "fichiers/" . $buffer_brand;
+            move_uploaded_file($_FILES["brand"]["tmp_name"], $tr_brand);
+
+
         $buffer = basename($_FILES["proPic1"]["name"]);
             $tr = "fichiers/" . $buffer;
             move_uploaded_file($_FILES["proPic1"]["tmp_name"], $tr);
@@ -34,7 +42,15 @@ if (isset($_POST['ajouter'])) {
             $tr1 = "fichiers/" . $buffer1;
             move_uploaded_file($_FILES["proPic2"]["tmp_name"], $tr1);
 
-            $query=$conn->prepare("INSERT INTO `product`(`nom_prd`, `categorie`, `details`, `image1`, `image2`) VALUES  ('$nom','$cat','$desc','$file1','$file2');");
+            $buffer2 = basename($_FILES["proPic3"]["name"]);
+            $tr2 = "fichiers/" . $buffer2;
+            move_uploaded_file($_FILES["proPic3"]["tmp_name"], $tr2);
+
+            $buffer3 = basename($_FILES["proPic4"]["name"]);
+            $tr3 = "fichiers/" . $buffer3;
+            move_uploaded_file($_FILES["proPic4"]["tmp_name"], $tr3);
+
+            $query=$conn->prepare("INSERT INTO `product`(`nom_prd`, `categorie`, `details`, `brand`, `image1`, `image2`, `image3`, `image4`) VALUES  ('$nom','$cat','$desc','$brand','$file1','$file2','$file3','$file4');");
             $query->execute();  
 }
 }
@@ -297,6 +313,7 @@ if (isset($_POST['supprimer'])) {
 
                 </div>
             </section>
+            <script src="../assets/textarea/ckeditor/ckeditor.js"></script>
             <section id="Add-cat">
                 <div class="title">Ajouter un Produit</div>
                 <form action method="POST" enctype="multipart/form-data">
@@ -315,14 +332,19 @@ if (isset($_POST['supprimer'])) {
                         </select>
                     </div>
                     <div>
-                        <label for="proDesc">Description de produit</label>
-                        <textarea required type="text" placeholder=" Entrer la description du  produit ici "
-                            id="proDesc" name="proDesc"></textarea>
+                        <label for="message">Description de produit</label>
+                        <textarea contenteditable="true" required name="message" id="editor" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <div>
+                        <label for="proName">La marque de produit</label>
+                        <input required style="margin-top: 1em;" type="file" name="brand">
                     </div>
                     <div>
                         <label for="prodPic">Photos de produit</label>
                         <input required style="margin-top: 1em;" type="file" name="proPic1">
-                        <input required style="margin-top: 1em;" type="file" name="proPic2">
+                        <input style="margin-top: 1em;" type="file" name="proPic2">
+                        <input style="margin-top: 1em;" type="file" name="proPic3">
+                        <input style="margin-top: 1em;" type="file" name="proPic4">
                     </div>
 
                     <button type="submit" name="ajouter">Ajouter</button>
@@ -343,7 +365,10 @@ if (isset($_POST['supprimer'])) {
     </main>
 
     <script src="js/prd.js"></script>
-
+    
+    <script>
+    CKEDITOR.replace('message');
+    </script>
 
 </body>
 

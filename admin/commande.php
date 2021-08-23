@@ -18,7 +18,7 @@ $results=$query->fetchAll();
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/header.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <title>commanede</title>
+    <title>commande</title>
 </head>
 
 <body>

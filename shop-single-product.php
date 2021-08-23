@@ -6,11 +6,15 @@ $resultsC=$query->fetchAll();
 
 
 
-
 $id=$_GET['id'];
 $query=$conn->prepare("SELECT * FROM `product` WHERE id_prd='$id';");
 $query->execute();
 $results=$query->fetchAll();
+
+$cat_n=$_GET['categorie'];
+$queryP=$conn->prepare("SELECT * FROM `product` WHERE categorie='$cat_n' && id_prd!=$id;");
+$queryP->execute();
+$res=$queryP->fetchAll();
 
 ?>
 <!DOCTYPE html>
@@ -188,6 +192,9 @@ $results=$query->fetchAll();
         <div class="col-lg-7 mb-7 mb-lg-0">
           <div class="pr-lg-4">
             <div class="position-relative">
+              <div class="brand">
+              <img src="assets/css/images/<?php echo $results[0]['brand'];?>" alt="">
+              </div>
               <!-- Main Slider -->
               <div id="heroSlider" class="js-slick-carousel slick border rounded-lg"
                    data-hs-slick-carousel-options='{
@@ -202,9 +209,33 @@ $results=$query->fetchAll();
                 <div class="js-slide">
                   <img class="img-fluid w-100 rounded-lg" src="admin/fichiers/<?php echo $results[0]['image1'];?>" alt="Image Description">
                 </div>
-                <div class="js-slide">
-                  <img class="img-fluid w-100 rounded-lg" src="admin/fichiers/<?php echo $results[0]['image2'];?>" alt="Image Description">
-                </div>
+                <?php
+                  $img=$results[0]['image2'];
+                  if (!empty($img)) {
+                  echo"
+                <div class='js-slide'>
+                  <img class='img-fluid w-100 rounded-lg' src='admin/fichiers/$img' alt='Image Description'>
+                </div>";
+                  }
+                  ?>
+                   <?php
+                  $img1=$results[0]['image3'];
+                  if (!empty($img1)) {
+                  echo"
+                <div class='js-slide'>
+                  <img class='img-fluid w-100 rounded-lg' src='admin/fichiers/$img1' alt='Image Description'>
+                </div>";
+                  }
+                  ?>
+                   <?php
+                  $img2=$results[0]['image4'];
+                  if (!empty($img2)) {
+                  echo"
+                <div class='js-slide'>
+                  <img class='img-fluid w-100 rounded-lg' src='admin/fichiers/$img2' alt='Image Description'>
+                </div>";
+                  }
+                  ?>
               </div>
               <!-- End Main Slider -->
 
@@ -229,11 +260,39 @@ $results=$query->fetchAll();
                       <img class="avatar-img" src="admin/fichiers/<?php echo $results[0]['image1'];?>" alt="Image Description">
                     </a>
                   </div>
-                  <div class="js-slide p-1">
-                    <a class="js-slick-thumb-progress d-block avatar avatar-circle border p-1" href="javascript:;">
-                      <img class="avatar-img" src="admin/fichiers/<?php echo $results[0]['image2'];?>" alt="Image Description">
+                  <?php
+                  $img=$results[0]['image2'];
+                  if (!empty($img)) {
+                  echo"
+                  <div class='js-slide p-1'>
+                    <a class='js-slick-thumb-progress d-block avatar avatar-circle border p-1' href='javascript:;'>
+                      <img class='avatar-img' src='admin/fichiers/$img'>
                     </a>
-                  </div>
+                  </div>";
+                }
+                  ?>
+                  <?php
+                  $img1=$results[0]['image3'];
+                  if (!empty($img1)) {
+                  echo"
+                  <div class='js-slide p-1'>
+                    <a class='js-slick-thumb-progress d-block avatar avatar-circle border p-1' href='javascript:;'>
+                      <img class='avatar-img' src='admin/fichiers/$img1'>
+                    </a>
+                  </div>";
+                }
+                  ?>
+                  <?php
+                  $img2=$results[0]['image4'];
+                  if (!empty($img2)) {
+                  echo"
+                  <div class='js-slide p-1'>
+                    <a class='js-slick-thumb-progress d-block avatar avatar-circle border p-1' href='javascript:;'>
+                      <img class='avatar-img' src='admin/fichiers/$img2'>
+                    </a>
+                  </div>";
+                }
+                  ?>
                 </div>
               </div>
               <!-- End Slider Nav -->
@@ -251,8 +310,10 @@ $results=$query->fetchAll();
 
           <!-- Price -->
           <div class="mb-5">
-            <h2 class="font-size-1 text-body mb-0">Categorie:</h2>
-            <span class="text-dark font-size-2 font-weight-bold"><?php echo $results[0]['categorie'];?></span>
+            <h2 class="font-size-1 text-body mb-0">Categorie: <?php echo $results[0]['categorie'];?></h2>
+          </div>
+          <div class="mb-5">
+            <h2 class="font-size-1 text-body mb-0" style="color:red !important;">Numéro d'article: EA34589</h2>
           </div>
           <!-- End Price -->
 
@@ -275,6 +336,48 @@ $results=$query->fetchAll();
         </div>
         <!-- End Product Description -->
       </div>
+      <div class="w-md-80 w-lg-40 text-center mx-md-auto mb-5 mb-md-9" style="margin-top: 10em;">
+        <h2>Autre produits</h2>
+      </div>
+       <!-- Products -->
+       <div class='row mx-n2 mb-5'>
+          <?php
+          if (sizeof($res)>0) {
+            for ($i=0; $i < sizeof($res); $i++) {
+              $id=$res[$i]['id_prd'];
+              $nom_prd=$res[$i]['nom_prd'];
+              $categorie=$res[$i]['categorie'];
+              $image1=$res[$i]['image1'];
+              echo"
+            <div class='col-sm-6 col-lg-4 px-2 px-sm-3 mb-3 mb-sm-5'>
+              <!-- Product -->
+              <div class='card card-bordered shadow-none text-center h-100'>
+                <div class='position-relative'>
+                  <img class='card-img-top' src='admin/fichiers/$image1' alt='Image Description'>
+                </div>
+
+                <div class='card-body pt-4 px-4 pb-0'>
+                  <div class='mb-2'>
+                    <a class='d-inline-block text-body small font-weight-bold mb-1' href='#'>$categorie</a>
+                    <span class='d-block font-size-1'>
+                      <a class='text-inherit' href='shop-single-product.php?id=$id && categorie=$cat_n'>$nom_prd</a>
+                    </span>
+                  </div>
+                </div>
+
+                <div class='card-footer border-0 pt-0 pb-4 px-4'>
+                 <a href='shop-single-product.php?id=$id && categorie=$cat_n'><button type='button'  class='btn btn-sm btn-outline-primary btn-pill transition-3d-hover'>Plus de détails</button></a>
+                </div>
+              </div>
+              <!-- End Product -->
+            </div>
+          ";
+            }
+          }
+          
+          
+          ?>
+          </div>
     </div>
     <!-- End Hero Section -->  
   </main>
