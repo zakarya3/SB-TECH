@@ -154,6 +154,11 @@
     left: 50%;
     content: "";
   }
+
+  .pagination{
+      justify-content: center;
+      align-items: center;
+  }
   .text-display .line-btm {
     left: 60%;
   }

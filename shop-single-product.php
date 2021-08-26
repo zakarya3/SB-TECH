@@ -12,7 +12,7 @@ $query->execute();
 $results=$query->fetchAll();
 
 $cat_n=$_GET['categorie'];
-$queryP=$conn->prepare("SELECT * FROM `product` WHERE categorie='$cat_n' && id_prd!=$id;");
+$queryP=$conn->prepare("SELECT * FROM `product` WHERE categorie='$cat_n' && id_prd!=$id LIMIT 0,6;");
 $queryP->execute();
 $res=$queryP->fetchAll();
 
@@ -116,7 +116,7 @@ $res=$queryP->fetchAll();
                   $cat=$resultsC[$i]['nom_cat'];
                   echo"
                     <div class='hs-has-sub-menu'>
-                      <a id='navLinkContactsServices' class='hs-mega-menu-invoker dropdown-item ' href='shop-products-grid.php?categorie=$cat'
+                      <a id='navLinkContactsServices' class='hs-mega-menu-invoker dropdown-item ' href='shop-products-grid.php?categorie=$cat && start=0'
                         aria-haspopup='true' aria-expanded='false'
                         aria-controls='navSubmenuContactsServices'> $cat</a>
 

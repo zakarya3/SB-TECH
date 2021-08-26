@@ -201,7 +201,7 @@ $results=$query->fetchAll();
               <p class='mb-0'>$cat</p>
             </div>
             <div class='card-footer'>
-              <a class='font-weight-bold' href='shop-products-grid.php?categorie=$cat'>Voir les produits <i class='fas fa-angle-right fa-sm ml-1'></i></a>
+              <a class='font-weight-bold' href='shop-products-grid.php?categorie=$cat && start=0'>Voir les produits <i class='fas fa-angle-right fa-sm ml-1'></i></a>
             </div>
           </div>
           <!-- End Card Info -->

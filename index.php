@@ -109,7 +109,7 @@ $resultsP=$queryP->fetchAll();
                   $cat=$results[$i]['nom_cat'];
                   echo"
                     <div class='hs-has-sub-menu'>
-                      <a id='navLinkContactsServices' class='hs-mega-menu-invoker dropdown-item ' href='shop-products-grid.php?categorie=$cat'
+                      <a id='navLinkContactsServices' class='hs-mega-menu-invoker dropdown-item ' href='shop-products-grid.php?categorie=$cat && start=0'
                         aria-haspopup='true' aria-expanded='false'
                         aria-controls='navSubmenuContactsServices'> $cat</a>
 

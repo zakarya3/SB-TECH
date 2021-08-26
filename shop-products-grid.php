@@ -5,15 +5,24 @@ $query->execute();
 $results=$query->fetchAll();
 
 
-$query1P=$conn->prepare("SELECT COUNT(id_prd) FROM product;");
-$query1P->execute();
-$resP=$query1P->fetchAll();
-
 $cat_n=$_GET['categorie'];
+
 if (!empty($cat_n)) {
-$queryP=$conn->prepare("SELECT * FROM `product` WHERE categorie='$cat_n';");
+  $numperpage=12;
+$page=$_GET['start'];
+if (!$page) $page=0;
+$start=$page * $numperpage;
+$queryP=$conn->prepare("SELECT * FROM `product` WHERE categorie='$cat_n' LIMIT $start,$numperpage;");
 $queryP->execute();
 $res=$queryP->fetchAll();
+
+$query1P=$conn->prepare("SELECT COUNT(id_prd) FROM product WHERE categorie='$cat_n';");
+$query1P->execute();
+$resP=$query1P->fetchAll();
+$numrecord=$resP[0]['COUNT(id_prd)'];
+$numlinks=ceil($numrecord/$numperpage);
+
+
 }else {
   $queryP=$conn->prepare("SELECT * FROM `product`;");
 $queryP->execute();
@@ -123,7 +132,7 @@ $res=$queryP->fetchAll();
                   $cat=$results[$i]['nom_cat'];
                   echo"
                     <div class='hs-has-sub-menu'>
-                      <a id='navLinkContactsServices' class='hs-mega-menu-invoker dropdown-item ' href='shop-products-grid.php?categorie=$cat'
+                      <a id='navLinkContactsServices' class='hs-mega-menu-invoker dropdown-item ' href='shop-products-grid.php?categorie=$cat && start=0'
                         aria-haspopup='true' aria-expanded='false'
                         aria-controls='navSubmenuContactsServices'> $cat</a>
 
@@ -161,8 +170,8 @@ $res=$queryP->fetchAll();
                         "maxWidth": "900px"
                       }
                     }'>
-                  <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link " href="page-contacts-start-up.php" aria-haspopup="true"
-                    aria-expanded="false">Contact</a>
+                  <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link " href="page-contacts-start-up.php"
+                    aria-haspopup="true" aria-expanded="false">Contact</a>
 
                   <!-- Demos - Mega Menu -->
                   <div class="hs-mega-menu" aria-labelledby="demosMegaMenu">
@@ -200,14 +209,16 @@ $res=$queryP->fetchAll();
           <!-- Sorting -->
           <div class="row align-items-center mb-5">
             <div class="col-sm mb-3 mb-sm-0">
-              <span class="font-size-1 ml-1"><?php echo $resP[0]['COUNT(id_prd)'];?> products</span>
+              <span class="font-size-1 ml-1">
+                <?php echo $resP[0]['COUNT(id_prd)'];?> products
+              </span>
             </div>
           </div>
           <!-- End Sorting -->
 
           <!-- Products -->
           <div class='row mx-n2 mb-5'>
-          <?php
+            <?php
           if (sizeof($res)>0) {
             for ($i=0; $i < sizeof($res); $i++) {
               $id=$res[$i]['id_prd'];
@@ -246,36 +257,26 @@ $res=$queryP->fetchAll();
           </div>
 
           <!-- Pagination -->
-          <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-between align-items-center">
-              <li class="page-item ml-0">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo; Prev</span>
-                  <span class="sr-only">Previous</span>
-                </a>
-              </li>
-              <li class="page-item">
-                <div class="d-flex align-items-center">
-                  <span class="d-none d-sm-inline-block text-body">Page:</span>
-                  <select class="custom-select custom-select-sm w-auto mx-2">
-                    <option value="quantity1">1</option>
-                    <option value="quantity2">2</option>
-                    <option value="quantity3">3</option>
-                    <option value="quantity4">4</option>
-                    <option value="quantity5">5</option>
-                    <option value="quantity6">6</option>
-                    <option value="quantity7">7</option>
-                    <option value="quantity8">8</option>
-                  </select>
-                  <span class="d-none d-sm-inline-block text-body">of 8</span>
-                </div>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">Next &raquo;</span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </li>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+            
+              <?php
+              $catGet=$_GET['categorie'];
+              $previous=$page-1;
+              if ($page!=0) {
+                echo"<li class='page-item'><a class='page-link' href='shop-products-grid.php?categorie=$catGet && start=$previous'>Previous</a></li>";
+              }
+              
+              for ($i=0 ; $i < $numlinks ; $i++) { 
+                $y=$i+1;
+                echo"
+              <li class='page-item'><a class='page-link' href='shop-products-grid.php?categorie=$catGet && start=$i'>$y</a></li>";
+              }
+              $next=$page+1;
+              if ($next < $numlinks) {
+                echo"<li class='page-item'><a class='page-link' href='shop-products-grid.php?categorie=$catGet && start=$next'>Next</a></li>";
+              }
+              ?>
             </ul>
           </nav>
           <!-- End Pagination -->
@@ -326,8 +327,7 @@ $res=$queryP->fetchAll();
       <div class="row justify-content-between text-center">
         <div class="col-4 col-lg-2 mb-5 mb-lg-0">
           <div class="mx-3">
-            <img class="max-w-11rem max-w-md-13rem mx-auto" src="assets/css/images/logo.png"
-              alt="Image Description">
+            <img class="max-w-11rem max-w-md-13rem mx-auto" src="assets/css/images/logo.png" alt="Image Description">
           </div>
         </div>
         <div class="col-4 col-lg-2 mb-5 mb-lg-0">
@@ -350,14 +350,14 @@ $res=$queryP->fetchAll();
         </div>
         <div class="col-4 col-lg-2">
           <div class="mx-3">
-            <img class="max-w-11rem max-w-md-13rem mx-auto" src="assets/css/images/WhatsApp Image 2020-12-31 at 16.45.19.jpeg"
-              alt="Image Description">
+            <img class="max-w-11rem max-w-md-13rem mx-auto"
+              src="assets/css/images/WhatsApp Image 2020-12-31 at 16.45.19.jpeg" alt="Image Description">
           </div>
         </div>
         <div class="col-4 col-lg-2">
           <div class="mx-3">
-            <img class="max-w-11rem max-w-md-13rem mx-auto" src="assets/css/images/WhatsApp Image 2020-12-31 at 16.49.34.jpeg"
-              alt="Image Description">
+            <img class="max-w-11rem max-w-md-13rem mx-auto"
+              src="assets/css/images/WhatsApp Image 2020-12-31 at 16.49.34.jpeg" alt="Image Description">
           </div>
         </div>
       </div>
@@ -366,33 +366,33 @@ $res=$queryP->fetchAll();
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
 
- 
-<!-- ========== FOOTER ========== -->
-<div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="index.php" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-              <img class="pic" src="assets/svg/logo2.png" alt="">
-            </a>
-            <span class="text-muted">&copy; SB-TECH 2021-2022.</span>
-          </div>
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3">
-              <a href="" class="text-muted"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li class="ms-3">
-              <a href="" class="text-muted"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="ms-3">
-              <a href="" class="text-muted"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li class="ms-3">
-              <a href="page-login.php" class="text-muted">connexion</i></a>
-            </li>
-          </ul>
-        </footer>
+
+  <!-- ========== FOOTER ========== -->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="index.php" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <img class="pic" src="assets/svg/logo2.png" alt="">
+        </a>
+        <span class="text-muted">&copy; SB-TECH 2021-2022.</span>
       </div>
-    <!-- ========== END FOOTER ========== -->
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a href="" class="text-muted"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li class="ms-3">
+          <a href="" class="text-muted"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="ms-3">
+          <a href="" class="text-muted"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="ms-3">
+          <a href="page-login.php" class="text-muted">connexion</i></a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  <!-- ========== END FOOTER ========== -->
 
   <!-- Go to Top -->
   <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;" data-hs-go-to-options='{
