@@ -35,6 +35,11 @@ $resultsP=$queryP->fetchAll();
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- CSS Front Template -->
   <link rel="stylesheet" href="assets/css/theme.minc619.css?v=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -446,6 +451,17 @@ $resultsP=$queryP->fetchAll();
 
     <!-- JS Front -->
     <script src="assets/js/theme.min.js"></script>
+
+
+
+    <script>
+      $('.hs-mega-menu-invoker').click(function() {
+    var sectionTo = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(sectionTo).offset().top
+    }, 1500);
+});
+    </script>
 
     <!-- JS Plugins Init. -->
     <script>

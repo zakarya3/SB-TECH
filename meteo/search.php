@@ -37,7 +37,7 @@ $password=$_SESSION['password'];
 
         <div class="logo">
 
-            <img src="logo2.png" alt="">
+            <img src="images/logo2.png" alt="">
 
         </div>
 
