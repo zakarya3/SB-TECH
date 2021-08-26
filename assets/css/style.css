@@ -92,3 +92,68 @@
     width: 80%;
     border-radius: 50px;
 }
+.video-con {
+    width: 100%;
+    height: 90vh !important;
+    z-index: 1;
+}
+.video-con::before {
+    position: absolute; 
+    height: 100%;
+    background-color: #1b1b1b4b;
+    top: 0;
+    content: "";
+  }
+  video {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .text-display { 
+    position: absolute;
+    width: fit-content;
+    height: auto;
+    top: 0%;
+    left: 85%;
+    -webkit-transform: translate(-100%, -50%);
+    transform: translate(-100%, 100%);
+    z-index: 2;
+    font-size: 1.2em;
+  }
+  .text-display span {
+    color: #ff9a00;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Open Sans",sans-serif;
+  }
+  .text-display small {
+    font-family: "Open Sans",sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  
+  .text-display .text {
+    padding: 0.5em 0;
+    color: #fff;
+    font-family: Falling;
+    font-size: 1.65em;
+  }
+  
+  .text-display .line {
+    position: relative;
+    background-color: #ff9a00;
+    width: 25%;
+    height: 0.2em;
+  }
+  .text-display .line::before {
+    position: absolute;
+    width: 50%;
+    background-color: #fff;
+    height: 100%;
+    left: 50%;
+    content: "";
+  }
+  .text-display .line-btm {
+    left: 60%;
+  }

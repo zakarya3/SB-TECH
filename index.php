@@ -32,8 +32,7 @@ $resultsP=$queryP->fetchAll();
   <!-- CSS Implementing Plugins -->
   <link rel="stylesheet" href="assets/css/vendor.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- CSS Front Template -->
   <link rel="stylesheet" href="assets/css/theme.minc619.css?v=1.0">
 </head>
@@ -159,8 +158,8 @@ $resultsP=$queryP->fetchAll();
                         "maxWidth": "900px"
                       }
                     }'>
-                  <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link " href="page-contacts-start-up.php" aria-haspopup="true"
-                    aria-expanded="false">Contact</a>
+                  <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link " href="page-contacts-start-up.php"
+                    aria-haspopup="true" aria-expanded="false">Contact</a>
 
                   <!-- Demos - Mega Menu -->
                   <div class="hs-mega-menu" aria-labelledby="demosMegaMenu">
@@ -190,51 +189,20 @@ $resultsP=$queryP->fetchAll();
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-    <!-- Hero Section -->
-    <div class="d-lg-flex position-relative">
-      <div class="container d-lg-flex align-items-lg-center space-top-2 space-lg-0 min-vh-lg-100">
-        <!-- Content -->
-        <div class="w-md-100">
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="mb-5 mt-11">
-                <h1 class="display-4 mb-3">
-                  Matériel et Fourniture Industriel
-                </h1>
-                <p class="lead">Fournisseur de référence de matériels industriels .</p>
-              </div>
-
-              <a class="btn btn-primary btn-wide transition-3d-hover" href="categories.php">Nos produits</a>
-              <a class="btn btn-link btn-wide" href="page-contacts-start-up.php">Contactez-nous <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-            </div>
-          </div>
+  <div class="video-con">
+          <video autoplay="" loop="" muted="">
+            <source src="assets/video/pexels-c-technical-6153453.mp4" autoplay="" controls="false" type="video/mp4">
+          </video>
         </div>
-        <!-- End Content -->
-
-        <!-- SVG Shape -->
-        <figure class="col-lg-7 col-xl-6 d-none d-lg-block position-absolute top-0 right-0 pr-0 ie-main-hero"
-          style="margin-top: 6.75rem;">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1137.5 979.2">
-            <path fill="#F9FBFF" d="M565.5,957.4c81.1-7.4,155.5-49.3,202.4-115.7C840,739.8,857,570,510.7,348.3C-35.5-1.5-4.2,340.3,2.7,389
-              c0.7,4.7,1.2,9.5,1.7,14.2l29.3,321c14,154.2,150.6,267.8,304.9,253.8L565.5,957.4z" />
-            <defs>
-              <path id="mainHeroSVG1"
-                d="M1137.5,0H450.4l-278,279.7C22.4,430.6,24.3,675,176.8,823.5l0,0C316.9,960,537.7,968.7,688.2,843.6l449.3-373.4V0z" />
-            </defs>
-            <clipPath id="mainHeroSVG2">
-              <use xlink:href="#mainHeroSVG1" />
-            </clipPath>
-            <g transform="matrix(1 0 0 1 0 0)" clip-path="url(#mainHeroSVG2)">
-              <image width="750" height="650" xlink:href="assets/img/hi.jpeg"
-                transform="matrix(1.4462 0 0 1.4448 52.8755 0)"></image>
-            </g>
-          </svg>
-        </figure>
-        <!-- End SVG Shape -->
-      </div>
-    </div>
-    <!-- End Hero Section -->
-
+        <div class="text-display">
+                    <div class="line-top line"></div>
+                    <div class="text">
+                        <span>SB-TECH</span>
+                        <br>
+                        <small>Fournisseur de référence <br> de matériels industriels</small>
+                    </div>
+                    <div class="line-btm line"></div>
+                </div>
     <!-- Articles Section -->
     <div class="container space-2 space-top-xl-3 space-bottom-lg-3">
       <!-- Title -->
@@ -276,8 +244,7 @@ $resultsP=$queryP->fetchAll();
 
         <div class="col-sm-6 col-lg-4 px-2 px-lg-3" data-aos="fade-up" data-aos-delay="200">
           <!-- Card -->
-          <a class="js-go-to card bg-warning text-left h-100 transition-3d-hover" href="#"
-            data-hs-go-to-options='{
+          <a class="js-go-to card bg-warning text-left h-100 transition-3d-hover" href="#" data-hs-go-to-options='{
               "targetSelector": "#demoExamplesSection",
               "offsetTop": 0,
               "position": null,
@@ -305,8 +272,8 @@ $resultsP=$queryP->fetchAll();
     <div class="container space-2 space-lg-3">
       <div class="row justify-content-lg-between">
         <div class="col-lg-5 order-lg-2 pl-lg-0">
-          <div class="bg-img-hero h-100 min-h-450rem rounded-lg"
-            style="background-image: url(assets/img/2.jpeg);"></div>
+          <div class="bg-img-hero h-100 min-h-450rem rounded-lg" style="background-image: url(assets/img/2.jpeg);">
+          </div>
         </div>
 
         <div class="col-lg-6 order-lg-1">
@@ -363,9 +330,9 @@ $resultsP=$queryP->fetchAll();
             <!-- Title -->
             <div class="text-center mb-4">
               <h2 class="h1">Plateforme météo</h2>
-              <p>SB-TECH Cloud Platform <br> Accédez à toutes les données de votre moniteur d'environnement ou de votre station météo <br> <br>  <a class="btn btn-sm btn-primary transition-3d-hover"
-                    href="meteo/login.php"
-                    target="_blank">Se connecter</a></p>
+              <p>SB-TECH Cloud Platform <br> Accédez à toutes les données de votre moniteur d'environnement ou de votre
+                station météo <br> <br> <a class="btn btn-sm btn-primary transition-3d-hover" href="meteo/login.php"
+                  target="_blank">Se connecter</a></p>
             </div>
           </div>
         </div>
@@ -426,33 +393,33 @@ $resultsP=$queryP->fetchAll();
 
 
     <!-- ========== FOOTER ========== -->
-      <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="index.php" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-              <img class="pic" src="assets/svg/logo2.png" alt="">
-            </a>
-            <span class="text-muted">&copy; SB-TECH 2021-2022.</span>
-          </div>
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3">
-              <a href="" class="text-muted"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li class="ms-3">
-              <a href="" class="text-muted"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="ms-3">
-              <a href="" class="text-muted"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li class="ms-3">
-              <a href="page-login.php" class="text-muted">connexion</i></a>
-            </li>
-          </ul>
-        </footer>
-      </div>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="index.php" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <img class="pic" src="assets/svg/logo2.png" alt="">
+          </a>
+          <span class="text-muted">&copy; SB-TECH 2021-2022.</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a href="" class="text-muted"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li class="ms-3">
+            <a href="" class="text-muted"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="ms-3">
+            <a href="" class="text-muted"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="ms-3">
+            <a href="page-login.php" class="text-muted">connexion</i></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
     <!-- ========== END FOOTER ========== -->
 
-   
+
 
     <!-- Go to Top -->
     <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;" data-hs-go-to-options='{
