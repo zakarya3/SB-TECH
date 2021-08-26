@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 23 août 2021 à 18:00
+-- Généré le : jeu. 26 août 2021 à 21:45
 -- Version du serveur :  10.4.19-MariaDB
 -- Version de PHP : 8.0.6
 
@@ -73,15 +73,6 @@ CREATE TABLE `categorie` (
   `image` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Déchargement des données de la table `categorie`
---
-
-INSERT INTO `categorie` (`id_cat`, `nom_cat`, `image`) VALUES
-(17, 'Robotique', 'téléchargement (1).jpg'),
-(18, 'Electricité', 'téléchargement (2).jpg'),
-(20, 'Electricité / Robotique / Pneumatique', 'ombriere-parking-photovoltaique-1.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -127,17 +118,6 @@ CREATE TABLE `product` (
   `image3` varchar(100) NOT NULL,
   `image4` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `product`
---
-
-INSERT INTO `product` (`id_prd`, `nom_prd`, `categorie`, `details`, `brand`, `image1`, `image2`, `image3`, `image4`) VALUES
-(82, 'Climatiseur carrier 9000 btu', 'Robotique', '<ul>\r\n	<li>disjoncteur-diff-combine-1p-n-2mod-10ac-300ma-10ka-type-ac-26286817.jpg</li>\r\n	<li>disjoncteur-diff-combine-1p-n-2mod-10ac-300ma-10ka-type-ac-26286817.jpg</li>\r\n	<li>climatiseur-carrier-9000btu.jpg</li>\r\n</ul>\r\n', 'logo.png', '106010211.png', 'disjoncteur-phase-neutre-6a.jpg.pagespeed.ce.OE1JC9i6FX.jpg', '', ''),
-(83, 'Disjoncteur', 'Robotique', '<p>zz</p>\r\n', 'logo.png', 'disjoncteur-phase-neutre-6a.jpg.pagespeed.ce.OE1JC9i6FX.jpg', '103346_1.jpg', '', ''),
-(84, 'Disjoncteur', 'Robotique', '<p>zz</p>\r\n', 'logo.png', 'disjoncteur-phase-neutre-6a.jpg.pagespeed.ce.OE1JC9i6FX.jpg', '103346_1.jpg', '', ''),
-(85, 'Disjoncteur', 'Robotique', '<p>zz</p>\r\n', 'logo.png', 'disjoncteur-phase-neutre-6a.jpg.pagespeed.ce.OE1JC9i6FX.jpg', '103346_1.jpg', '', ''),
-(86, 'Disjoncteur', 'Robotique', '<p>zz</p>\r\n', 'logo.png', 'disjoncteur-phase-neutre-6a.jpg.pagespeed.ce.OE1JC9i6FX.jpg', '103346_1.jpg', '', '');
 
 -- --------------------------------------------------------
 
@@ -246,7 +226,7 @@ ALTER TABLE `partner`
 -- AUTO_INCREMENT pour la table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id_prd` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id_prd` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT pour la table `user_meteo`
