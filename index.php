@@ -194,20 +194,20 @@ $resultsP=$queryP->fetchAll();
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-  <div class="video-con">
-          <video autoplay="" loop="" muted="">
-            <source src="assets/video/pexels-c-technical-6153453.mp4" autoplay="" controls="false" type="video/mp4">
-          </video>
-        </div>
-        <div class="text-display">
-                    <div class="line-top line"></div>
-                    <div class="text">
-                        <span>SB-TECH</span>
-                        <br>
-                        <small>Fournisseur de référence <br> de matériels industriels</small>
-                    </div>
-                    <div class="line-btm line"></div>
-                </div>
+    <div class="video-con">
+      <video autoplay="" loop="" muted="">
+        <source src="assets/video/pexels-c-technical-6153453.mp4" autoplay="" controls="false" type="video/mp4">
+      </video>
+    </div>
+    <div class="text-display">
+      <div class="line-top line"></div>
+      <div class="text">
+        <span>SB-TECH</span>
+        <br>
+        <small>Fournisseur de référence <br> de matériels industriels</small>
+      </div>
+      <div class="line-btm line"></div>
+    </div>
     <!-- Articles Section -->
     <div class="container space-2 space-top-xl-3 space-bottom-lg-3">
       <!-- Title -->
@@ -455,12 +455,12 @@ $resultsP=$queryP->fetchAll();
 
 
     <script>
-      $('.hs-mega-menu-invoker').click(function() {
-    var sectionTo = $(this).attr('href');
-    $('html, body').animate({
-      scrollTop: $(sectionTo).offset().top
-    }, 1500);
-});
+      $('.hs-mega-menu-invoker').click(function () {
+        var sectionTo = $(this).attr('href');
+        $('html, body').animate({
+          scrollTop: $(sectionTo).offset().top
+        }, 1500);
+      });
     </script>
 
     <!-- JS Plugins Init. -->
