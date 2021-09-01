@@ -87,6 +87,25 @@
 .pic{
     width: 80%;
 }
+
+.position-relative{
+  height: 50%;
+}
+.position-relative img{
+  width: 80%;
+}
+.card-body{
+  height: 25%;
+}
+.card-footer{
+  height: 25%;
+}
+.mb-2{
+  width: 100%;
+}
+.card-footer a{
+  width: 100%;
+}
 .brand{
     position: absolute;
     width: 10%;
@@ -97,6 +116,8 @@
     justify-content: center;
     align-items: center;
 }
+
+
 .brand img{
     width: 80%;
     border-radius: 50px;
@@ -164,10 +185,29 @@
     content: "";
   }
 
+
   .pagination{
       justify-content: center;
       align-items: center;
   }
   .text-display .line-btm {
     left: 60%;
+  }
+
+  @media(max-width: 786px){
+    .position-relative{
+      height: 50% !important;
+    }
+    .position-relative img{
+      width: 50% !important;
+    }
+    .position-relative img{
+      width: 40%;
+    }
+    .mb-2{
+      padding: 1em 0;
+    }
+    .card-footer{
+      padding: 1em 0;
+    }
   }

@@ -193,7 +193,7 @@ $res=$queryP->fetchAll();
           <div class="pr-lg-4">
             <div class="position-relative">
               <div class="brand">
-              <img src="assets/css/images/<?php echo $results[0]['brand'];?>" alt="">
+              <img src="admin/fichiers/<?php echo $results[0]['brand'];?>" alt="">
               </div>
               <!-- Main Slider -->
               <div id="heroSlider" class="js-slick-carousel slick border rounded-lg"
