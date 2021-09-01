@@ -48,7 +48,9 @@ $resultsP=$queryP->fetchAll();
     data-hs-header-options='{
             "fixMoment": 1000,
             "fixEffect": "slide"
-          }'>
+          }'
+          
+          >
 
 
     <div class="header-section">
@@ -194,19 +196,18 @@ $resultsP=$queryP->fetchAll();
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-    <div class="video-con">
-      <video autoplay="" loop="" muted="">
-        <source src="assets/video/pexels-c-technical-6153453.mp4" autoplay="" controls="false" type="video/mp4">
-      </video>
-    </div>
-    <div class="text-display">
-      <div class="line-top line"></div>
-      <div class="text">
-        <span>SB-TECH</span>
-        <br>
-        <small>Fournisseur de référence <br> de matériels industriels</small>
+  <div class="swiper mySwiper swiperSnd">
+      <div class="swiper-wrapper">
+       <div class="swiper-slide swip"><img src="assets/img/robot-with-laptop-computer-mouse.jpg" alt=""></div>
+       <div class="swiper-slide swip"><img src="assets/img/robot-with-laptop-computer-mouse.jpg" alt=""></div>
+        <div class="swiper-slide swip"><img src="assets/img/robot-with-laptop-computer-mouse.jpg" alt=""></div>
+       <div class="swiper-slide swip"><img src="assets/img/robot-with-laptop-computer-mouse.jpg" alt=""></div>
+       <div class="swiper-slide swip"><img src="assets/img/robot-with-laptop-computer-mouse.jpg" alt=""></div>
+       <div class="swiper-slide swip"><img src="assets/img/robot-with-laptop-computer-mouse.jpg" alt=""></div>
+       <div class="swiper-slide swip"><img src="assets/img/robot-with-laptop-computer-mouse.jpg" alt=""></div>
+       <div class="swiper-slide swip"><img src="assets/img/robot-with-laptop-computer-mouse.jpg" alt=""></div>
       </div>
-      <div class="line-btm line"></div>
+      <div class="swiper-pagination"></div>
     </div>
     <!-- Articles Section -->
     <div class="container space-2 space-top-xl-3 space-bottom-lg-3">
@@ -352,9 +353,9 @@ $resultsP=$queryP->fetchAll();
       <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
         <h2>Nos partenaires</h2>
       </div>
-      <div class="swiper-container mySwiper">
-        <div class="swiper-wrapper">
-          <?php
+      <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+      <?php
           if (sizeof($resultsP)>0) {
             for ($i=0; $i < sizeof($resultsP); $i++) { 
               $image=$resultsP[$i]['image'];
@@ -363,11 +364,11 @@ $resultsP=$queryP->fetchAll();
             }
           }
           ?>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
       </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
