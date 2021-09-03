@@ -135,10 +135,8 @@ $res=$queryP->fetchAll();
                       <a id='navLinkContactsServices' class='hs-mega-menu-invoker dropdown-item ' href='shop-products-grid.php?categorie=$cat && start=0'
                         aria-haspopup='true' aria-expanded='false'
                         aria-controls='navSubmenuContactsServices'> $cat</a>
-
                       <div id='navSubmenuContactsServices' class='hs-sub-menu' aria-labelledby='navLinkContactsServices'
                         style='min-width: 230px;'>
-
                       </div>
                     </div>";
                   }
@@ -215,7 +213,6 @@ $res=$queryP->fetchAll();
             </div>
           </div>
           <!-- End Sorting -->
-
           <!-- Products -->
           <div class='row mx-n2 mb-5'>
             <?php
@@ -230,9 +227,8 @@ $res=$queryP->fetchAll();
               <!-- Product -->
               <div class='card card-bordered shadow-none text-center h-100'>
                 <div class='position-relative'>
-                  <img class='card-img-top' src='admin/fichiers/$image1' alt='Image Description'>
+          <a href='shop-single-product.php?id=$id && categorie=$cat_n'><img class='card-img-top' src='admin/fichiers/$image1' alt='Image Description'></a>
                 </div>
-
                 <div class='card-body pt-4 px-4 pb-0'>
                   <div class='mb-2'>
                     <a class='d-inline-block text-body small font-weight-bold mb-1' href='#'>$categorie</a>
@@ -241,7 +237,6 @@ $res=$queryP->fetchAll();
                     </span>
                   </div>
                 </div>
-
                 <div class='card-footer border-0 pt-0 pb-4 px-4'>
                  <a href='shop-single-product.php?id=$id && categorie=$cat_n'><button type='button'  class='btn btn-sm btn-outline-primary btn-pill transition-3d-hover'>Plus de détails</button></a>
                 </div>
