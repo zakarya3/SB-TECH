@@ -191,7 +191,7 @@ $results=$query->fetchAll();
                             </svg> </div> SB-TECH
                     </li>
                     <li class="backend"> <a href="../index.php">Acceuil SiteWeb</a> </li>
-                    <li> <a href="/logout">Se deconnecter</a> </li>
+                    <li> <a href="disconn.php">Se deconnecter</a> </li>
 
                 </ul>
             </div>
