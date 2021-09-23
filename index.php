@@ -231,6 +231,10 @@
                     <div class="swiper-slide swip"><img
                         src="assets/img/robot-with-laptop-computer-mouse.jpg"
                         alt=""></div>
+                    <div class="swiper-slide swip"><img
+                        src="assets/img/robot-with-laptop-computer-mouse.jpg"
+                        alt=""></div>
+                  </div>
                   <div class="swiper-pagination"></div>
                 </div>
                 <!-- Articles Section -->
