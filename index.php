@@ -35,18 +35,13 @@
       <link rel="stylesheet" href="assets/css/vendor.min.css">
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="assets/css/welcome.css">
-      <link rel="stylesheet"
-        href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
       <!-- CSS Front Template -->
       <link rel="stylesheet" href="assets/css/theme.minc619.css?v=1.0">
-      <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-      <script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-      <script
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     </head>
 
     <body>
@@ -236,22 +231,6 @@
                     <div class="swiper-slide swip"><img
                         src="assets/img/robot-with-laptop-computer-mouse.jpg"
                         alt=""></div>
-                    <div class="swiper-slide swip"><img
-                        src="assets/img/robot-with-laptop-computer-mouse.jpg"
-                        alt=""></div>
-                    <div class="swiper-slide swip"><img
-                        src="assets/img/robot-with-laptop-computer-mouse.jpg"
-                        alt=""></div>
-                    <div class="swiper-slide swip"><img
-                        src="assets/img/robot-with-laptop-computer-mouse.jpg"
-                        alt=""></div>
-                    <div class="swiper-slide swip"><img
-                        src="assets/img/robot-with-laptop-computer-mouse.jpg"
-                        alt=""></div>
-                    <div class="swiper-slide swip"><img
-                        src="assets/img/robot-with-laptop-computer-mouse.jpg"
-                        alt=""></div>
-                  </div>
                   <div class="swiper-pagination"></div>
                 </div>
                 <!-- Articles Section -->
@@ -270,27 +249,33 @@
                         <div class="bg-title">
                             <div class="text">
                                 <div class="line-top1 line"></div>
-                                NOTRE ENGAGMENT
+                                NOS  ENGAGMENTS
                                 <div class="line-btm2 line"></div>
 
                             </div>
                         </div>
                     </div>
                     <ul>
-
-                        <li>UNE <span>QUALITÉ</span> D'EXÉCUTION ASSURÉE PAR LE
-                            <span>PROFESSIONNALISME</span>, DE
-                            NOS
-                            INSTALLATEURS.
-                        </li>
-                        <li>UN <span>SUIVI CONTINU</span> DE LA CONCEPTION AU
-                            RACCORDEMENT.</li>
-                        <li>DES PRIX <span>ATTRACTIFS</span> ET COMPÉTITIFS.</li>
-                        <li>DU MATÉRIEL <span>HAUT DE GAMME</span>, GARANTI POUR
-                            SON RENDEMENT ET SA LONGÉVITÉ
-                            <span>EXCEPTIONNELS.</span>
-                        </li>
-
+                       <ul>
+                       <li>
+                         <i class="fas fa-fax"></i>
+                         <h3>Disponibilié</h3>
+                       </li>
+                       <li>
+                        <i class="fas fa-wrench"></i>
+                         <h3>Flexibilité</h3>
+                       </li>
+                       </ul>
+                       <ul>
+                       <li>
+                        <i class="far fa-comments"></i>
+                         <h3>Expertise</h3>
+                       </li>
+                       <li>
+                        <i class="far fa-check-square"></i>
+                         <h3>Qualité</h3>
+                       </li>
+                       </ul>
                     </ul>
                 </div>
             </div>
@@ -303,23 +288,23 @@
                 <div class="con-secgRP">
                     <div class="bg-title">
                         <div class="text">
-                            <div class="line-top1 line"></div>
+                            <div class="line-top1 line" style="margin-top: 2em;"></div>
 
-                            NOTRE SERVICES
+                            NOS PRODUITS
                             <div class="line-btm2 line"></div>
 
                         </div>
                     </div>
                 </div>
                 <ul>
-                    <div>
-                        <li>ÊTRE PROCHE DE VOUS</li>
-                        <li>REPONDRE A VOS BESION</li>
-                    </div>
-                    <div>
-                        <li>S'ADAPTER À VOS PLANNINGS</li>
-                        <li>ACCOMPAGNER VOS PROJETS </li>
-                    </div>
+                    <ul>
+                        <li>Groupe machine & Robotique</li>
+                        <li>Instrumentation & Régulation</li>
+                    </ul>
+                    <ul>
+                        <li>Pièces hydraulique et pneumatique</li>
+                        <li>Matériel électrique industriel modulaire</li>
+                    </ul>
                 </ul>
             </div>
 
@@ -331,81 +316,63 @@
 
         <section id="activite" style="margin-top: 2em;">
             <div class="text" style="font-size: 1.4em !important;">
-                Nos activités
+                Nos services
 
             </div>
-            <div class="row" data-aos="fade-down">
-                <div class="col c1">
+            <div class="row-r" data-aos="fade-down">
+                <div class="col-c c1">
                     <div class="front">
-                        <img src="assets/img//light-bulb.jpg" alt="">
+                        <img src="assets/img/2.jpeg" alt="">
                         <div class="content">
                             <div class="border-fr"></div>
-                            <div class="name">Robotique</div>
+                            <div class="name">Service de vente</div>
                         </div>
                     </div>
                     <div class="back">
                         <div class="border b1"></div>
-                        <div class="name">Robotique</div>
-                        <div class="textP">SwisSysteme dispose d'un service
-                            spécialisée dans l'électricité
-                            générale et
-                            l'industrie du bâtiment. Appuyée sur des
-                            spécialistes hautement qualifiés et sur un
-                            savoir-faire inégalé, SwisSysteme vous propose des
-                            solutions sur mesure, répondant
-                            aux
-                            exigences d'un travail de qualité. De la réalisation
-                            des schémas globaux à
-                            l'optimisation
-                            des ressources en passant par le conseil,
-                            SwisSysteme vous garantit un service
-                            fiable et de
-                            qualité.
+                        <div class="name">Service de vente</div>
+                        <div class="textP">Nos experts s'assureront du bon choix et que toutes les exigences ont été correctement satisfaites. <br>
+                          -- Conseil : notre équipe de conseil vous accompagne dans vos achats.<br>
+                          -- Solutions: nous proposons des solutions sur mesure pour rationaliser et automatiser vos processus de commande.<br>
+                          -- Offre sur mesure : adaptation au besoin des clients et de leur activité avec des tarifs préférentiels.<br>
                         </div>
                     </div>
                 </div>
-                <div class="col c2">
+                <div class="col-c c2">
                     <div class="front">
-                        <img src="assets/img//1.jpg" alt="">
+                        <img src="assets/img/2.jpeg" alt="">
                         <div class="content">
                             <div class="border-fr"></div>
-                            <div class="name">Photovoltaïque</div>
+                            <div class="name">Service de maintenance</div>
                         </div>
                     </div>
                     <div class="back">
                         <div class="border b2"></div>
-                        <div class="name">Photovoltaïque</div>
-                        <div class="textP">Nous avons pour mission de fournir
-                            des solutions solaires
-                            photovoltaiques,
-                            respectueuses de l’environnement, avec une qualité
-                            de classe mondiale.
+                        <div class="name">Service de maintenance</div>
+                        <div class="textP">Avec ce service, nous pouvons inspecter soigneusement vos installations, effectuer toutes les mises à jour nécessaires et nettoyer les composants essiels de vos équipements. Nos techniciens de maintenance consultent aussi la mémoire des erreurs et veillent à ce que tout fonctionne de manière optimale.Nous accomplirons à intervalles réguliers toutes les tâches mentionnées dans votre programme de maintenance et pour cela nous appuyions sur : <br>
+                        -- Efficacité: performance de pointe et de rendement maximum. <br>
+                        -- Fiabilité: service productif avec une détection intelligente des défauts.
                         </div>
                     </div>
                 </div>
-                <div class="col c3">
+                <div class="col-c c3">
                     <div class="front">
-                        <img src="assets/img//clima.jpeg" alt="">
+                        <img src="assets/img/2.jpeg" alt="">
                         <div class="content">
                             <div class="border-fr"></div>
-                            <div class="name">Climatisation</div>
+                            <div class="name">Pourquoi nous sommes le fournisseur idéal:</div>
                         </div>
                     </div>
                     <div class="back">
                         <div class="border b3"></div>
-                        <div class="name">Climatisation</div>
-                        <div class="textP">Puisque votre bien-être est au cœur
-                            de nos préoccupations,
-                            SwisSysteme met à
-                            votre disposition son savoir-faire et son expertise
-                            pour vous offrir les meilleures
-                            prestations en matière de climatisation et de
-                            chauffage.
-                            Forte de sa compétence dans ce domaine, notre équipe
-                            vous conseille et vous compagne
-                            dans la
-                            réalisation d'installations fiables et optimales qui
-                            respectent l'environnement.
+                        <div class="name">Pourquoi nous sommes le fournisseur idéal:</div>
+                        <div class="textP">
+                          -- Disponibilité de matériels avec des prix concurrentiels. <br>
+                          -- Accompagnement du projet de la phase d'étude jusqu'à son terme. <br>
+                          -- étude, planification, estimation du budget de telles opérations. <br>
+                          -- Assistance professionnelle soutenue par le savoir-faire : autrement dit Des techniciens qualifiés qui ont acquis une vaste expérience sur le terrain. <br>
+                          -- Disponibilité à long terme des pièces d'origine et prévisibilité des coûts avec une gestion fiable des pièces détachées. <br>
+                          -- Service proactif avec une détection intelligente des défauts et des mises à jour à distance.
                         </div>
                     </div>
                 </div>
@@ -413,31 +380,32 @@
         </section>
 
                 <!--Partners-->
+                <section id="partenaire" style="margin-top: 2em;" data-aos="zoom-in-up">
+            <div class="text" style="font-size: 1.4em !important;">
+                Nos partenaires
 
-                <div class="container space-2 space-top-xl-3 space-bottom-lg-3">
-                  <!-- Title -->
-                  <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5
-                    mb-md-9">
-                    <h2>Nos partenaires</h2>
-                  </div>
-                  <div class="swiper mySwiper">
+            </div>
+            <div class="slider">
+                <div class="swiper-container">
                     <div class="swiper-wrapper">
-                      <?php
-                        if (sizeof($resultsP)>0) {
-                        for ($i=0; $i <sizeof($resultsP); $i++) {
-                          $image=$resultsP[$i]['image'];
-                          echo"
-                        <div class='swiper-slide'><img
-                            src='admin/fichiers/$image' alt=''></div>";
-                        }
-                        }
-                        ?>
-                      </div>
-                      <div class="swiper-button-next"></div>
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-pagination"></div>
+
+                    <?php
+          if (sizeof($resultsP)>0) {
+            for ($i=0; $i < sizeof($resultsP); $i++) { 
+              $image=$resultsP[$i]['image'];
+              echo"
+          <div class='swiper-slide'><img src='admin/fichiers/$image' alt=''></div>";
+            }
+          }
+          ?>
+
                     </div>
-                  </div>
+                    <div class="swiper-pagination"></div>
+
+                </div>
+
+            </div>
+        </section>
               </section>
                   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
                   <!-- Initialize Swiper -->
@@ -520,6 +488,7 @@
 
                 <script src="assets/js/particles.js"></script>
                 <script src="assets/js/app.js"></script>
+                <script src="assets/js/swiper.js"></script>
                 <script src="assets/js/particles.min.js"></script>
 
 
