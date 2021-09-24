@@ -168,7 +168,7 @@
                             <!-- Blog -->
                             <li class="hs-has-sub-menu navbar-nav-item">
                               <a id="blogMegaMenu" class="hs-mega-menu-invoker
-                                nav-link"href="#meteo" aria-haspopup="true"
+                                nav-link" href="meteo/login.php" aria-haspopup="true"
                                 aria-expanded="false"
                                 aria-labelledby="blogSubMenu">Météo</a>
 
@@ -226,13 +226,16 @@
                         src="assets/img/robot-with-laptop-computer-mouse.jpg"
                         alt=""></div>
                     <div class="swiper-slide swip"><img
-                        src="assets/img/robot-with-laptop-computer-mouse.jpg"
+                        src="assets/img/cyborg-hand-3d-background-technology-artificial-intelligence.jpg"
                         alt=""></div>
                     <div class="swiper-slide swip"><img
-                        src="assets/img/robot-with-laptop-computer-mouse.jpg"
+                        src="assets/img/electrical-technician-working-switchboard-with-fuses.jpg"
                         alt=""></div>
                     <div class="swiper-slide swip"><img
-                        src="assets/img/robot-with-laptop-computer-mouse.jpg"
+                        src="assets/img/experienced-operator-hard-hat.jpg"
+                        alt=""></div>
+                        <div class="swiper-slide swip"><img
+                        src="assets/img/man-electrical-technician-working-switchboard-with-fuses-installation-connection-electrical-equipment-close-up.jpg"
                         alt=""></div>
                   </div>
                   <div class="swiper-pagination"></div>
